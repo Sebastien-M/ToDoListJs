@@ -27,6 +27,17 @@ let add_p = function (i, title, comment) {
     newButton.type = "button";
     newButton.innerHTML = "Delete";
     before.appendChild(newButton);
+
+
+    //tr
+    let tr = document.createElement("tr");
+    tr.id = "tr" + i;
+    tr.innerHTML = title + " " + comment;
+    before = document.body.querySelector("#tableau");
+    before.appendChild(tr);
+
+
+
 }
 
 let form = document.body.querySelector("form");
@@ -42,11 +53,10 @@ form.addEventListener("submit", function (e) {
 
     //DELETE
     let button = document.body.querySelector("#deleteButton_" + i);
-
     button.addEventListener("click", function (e) {
         this.parentNode.remove(this);
         console.log("removed");
     });
-    
+
     e.preventDefault();
 });
