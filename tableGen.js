@@ -7,11 +7,11 @@ function trGen(text) {
     select.appendChild(tr);
     console.log("Tr " + a + " added")
 
-    /*let trVal = document.createElement("tr");
+    let trVal = document.createElement("tr");
     trVal.id = "trVal" + a;
     trVal.innerHTML = a;
     select = document.body.querySelector("#tdIndex");
-    select.appendChild(trVal);*/
+    select.appendChild(trVal);
 }
 
 let arr = ["AAA", "BBB", "CCC", "DDD", "EEE", "FFF"];
