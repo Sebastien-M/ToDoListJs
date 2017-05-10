@@ -44,10 +44,9 @@ form.addEventListener("submit", function (e) {
     let button = document.body.querySelector("#deleteButton_" + i);
 
     button.addEventListener("click", function (e) {
-        let div = document.body.querySelector('div1');
-        let section = document.body.querySelector("#to_fill");
-        console.log(i);
-        section.removeChild(div);
+        this.parentNode.remove(this);
+        console.log("removed");
     });
+    
     e.preventDefault();
 });
